@@ -60,11 +60,10 @@ components:
           public: 'false'
 commands:
   - id: build
-  - name: 1. Build
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-petclinic'
-        type: exec
-        command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} -DskipTests clean install'
+    name: 1. Build
+    exec:
+        workingDir: '${CHE_PROJECTS_ROOT}/spring-petclinic'
+        commandLine: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} -DskipTests clean install'
         component: maven
   - id: run
   - name: 2. Run
