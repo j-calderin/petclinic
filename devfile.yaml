@@ -4,10 +4,11 @@ metadata:
   version: 2.1.0
 projects:
   - name: spring-petclinic
-    source:
-      type: git
-      location: 'https://github.com/j-calderin/petclinic.git'
-      branch: main
+    git:
+      remote: 
+        origin: 'https://github.com/j-calderin/petclinic.git'
+      checkoutFrom:
+        revision: main
 components:
   - id: redhat/java11/latest
     type: chePlugin
