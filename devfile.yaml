@@ -1,6 +1,7 @@
 schemaVersion: 2.1.0
 metadata:
-  generateName: spring-petclinic-
+  name: spring-petclinic-
+  version: 2.1.0
 projects:
   - name: spring-petclinic
     source:
