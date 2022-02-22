@@ -5,7 +5,7 @@ metadata:
 projects:
   - name: spring-petclinic
     git:
-      remote: 
+      remotes: 
         origin: 'https://github.com/j-calderin/petclinic.git'
       checkoutFrom:
         revision: main
