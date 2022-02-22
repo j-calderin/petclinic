@@ -35,26 +35,26 @@ components:
       - value: 'jdbc:mysql://mysql-workspace:3306/petclinic'
         name: MYSQL_URL
    - name: "mysql"
-    container:
+     container:
       image: >-
 		registry.redhat.io/rhel8/mysql-80@sha256:55c08482a20b653dab4d78fad77b5a459e04258135e19fb14efbd1072c786fd3
       memoryLimit: "512Mi"
       mountSources: true
-	  env:
-		  - name: DATABASE_SERVICE_NAME
-			value: mysql-workspace
-		  - name: MYSQL_USER
-			value: petclinic
-		  - name: MYSQL_PASSWORD
-			value: petclinic
-		  - name: MYSQL_ROOT_PASSWORD
-			value: petclinic
-		  - name: MYSQL_DATABASE
-			value: petclinic
+      env:
+          - name: DATABASE_SERVICE_NAME
+                value: mysql-workspace
+          - name: MYSQL_USER
+                value: petclinic
+          - name: MYSQL_PASSWORD
+                value: petclinic
+          - name: MYSQL_ROOT_PASSWORD
+                value: petclinic
+          - name: MYSQL_DATABASE
+                value: petclinic
       volumes:
-		- name: mysql-storage
-		  containerPath: /var/lib/mysql
-	  endpoints:
+	- name: mysql-storage
+          containerPath: /var/lib/mysql
+      endpoints:
         - name: mysql-workspace
           attributes:
 			discoverable: 'true'
